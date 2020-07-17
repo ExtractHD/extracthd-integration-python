@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="shortcut icon" type="image/png" href="{{url_for('static', filename='img/favicon.ico')}}"/>
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}"/>
+    <title>Example</title>
+    <script src="https://cdn.socket.io/socket.io-1.0.0.js"></script>
+</head>
+<body>
+<div style="text-align: center;">
+    <div class="container">
+        <label>Document Type: </label>
+        <select name="document-type" id="document-types-select"></select>
+    </div>
+    <div class="container">
+        <label>File: </label>
+        <input type="file" id="file-input" autocomplete=off>
+    </div>
+    <div class="container">
+        <button type="submit" id="submit-button">Upload</button>
+    </div>
+</div>
+<div style="text-align: center;">
+    <div class="container" id="result-edit-link">
+    </div>
+    <div class="container">
+        <div class="container">
+            <ul id="result-list">
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="{{url_for('static', filename='js/docTypes.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/socket.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/index.js')}}"></script>
+</body>
+</html>
